@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">qwerty</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="title_activity_scrolling">ScrollingActivity</string>
+
+    <string name="user_transition">UserTransition</string>
+    <string name="user_image_transition">UserImageTransition</string>
+    <string name="home_button_transition">HomeButtonTransition</string>
+    <string name="reminders_button_transition">RemindersButtonTransition</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_user2">UserActivity2</string>
+    <string name="title_activity_xerox">XeroxActivity</string>
+</resources>

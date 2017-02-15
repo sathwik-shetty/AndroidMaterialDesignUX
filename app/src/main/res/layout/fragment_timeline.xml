@@ -1,0 +1,317 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.abc.qwerty.TimelineFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="100dp"
+            android:layout_height="1dp"
+            android:background="@color/indigo"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"></View>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="This month"
+            android:textColor="@color/light_grey"
+            android:layout_gravity="center_horizontal"/>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            app:cardElevation="4dp"
+            app:cardCornerRadius="2dp"
+            android:layout_marginTop="10dp" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/upcoming_exams" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Exam"
+                    android:textColor="@color/grey"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/imageView"
+                    android:layout_alignTop="@+id/imageView"
+                    android:layout_alignBaseline="@+id/imageView" />
+
+                <TextView
+                    android:id="@+id/textView_subject"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Subject 1"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="15dp"
+                    android:textStyle="normal|bold"
+                    android:layout_below="@+id/imageView" />
+
+                <TextView
+                    android:id="@+id/textView_lecturer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lecturer"
+                    android:textColor="@color/grey"
+                    android:paddingLeft="10dp"
+                    android:layout_below="@+id/textView_subject" />
+
+                <TextView
+                    android:id="@+id/textView_lecturer_designation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Asst. proff"
+                    android:textColor="@color/grey"
+                    android:paddingLeft="10dp"
+                    android:layout_below="@+id/textView_lecturer" />
+
+                <android.support.percent.PercentRelativeLayout
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/percentRelativeLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textView_lecturer_designation"
+                    android:padding="20dp" >
+
+                    <View
+                        android:id="@+id/view"
+                        app:layout_widthPercent="100%"
+                        android:layout_height="15dp"
+                        android:background="@drawable/button_background_fill_red"></View>
+
+                    <View
+                        app:layout_widthPercent="60%"
+                        android:layout_height="15dp"
+                        android:background="@drawable/button_background_fill_blue"
+                        android:elevation="4dp" ></View>
+
+                </android.support.percent.PercentRelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_below="@id/percentRelativeLayout"
+                    android:gravity="center_vertical" >
+
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:background="@drawable/button_background_fill_red" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Total marks (100)"
+                        android:textColor="@color/grey"
+                        android:layout_marginLeft="10dp"
+                        android:id="@+id/textView" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_below="@id/linearLayout"
+                    android:gravity="center_vertical" >
+
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:background="@drawable/button_background_fill_blue"
+                        android:layout_below="@+id/percentRelativeLayout" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Marks obtained (60)"
+                        android:textColor="@color/grey"
+                        android:layout_marginLeft="10dp" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <View
+            android:layout_width="100dp"
+            android:layout_height="1dp"
+            android:background="@color/indigo"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"></View>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Earlier"
+            android:textColor="@color/light_grey"
+            android:layout_gravity="center_horizontal"/>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            app:cardElevation="4dp"
+            app:cardCornerRadius="2dp"
+            android:layout_marginTop="10dp" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/upcoming_exams" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Exam"
+                    android:textColor="@color/grey"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/imageView2"
+                    android:layout_alignTop="@+id/imageView2"
+                    android:layout_alignBaseline="@+id/imageView2" />
+
+                <TextView
+                    android:id="@+id/textView_subject_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Subject 2"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="15dp"
+                    android:textStyle="normal|bold"
+                    android:layout_below="@+id/imageView2" />
+
+                <TextView
+                    android:id="@+id/textView_lecturer_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lecturer"
+                    android:textColor="@color/grey"
+                    android:paddingLeft="10dp"
+                    android:layout_below="@+id/textView_subject_2" />
+
+                <TextView
+                    android:id="@+id/textView_lecturer_designation_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Asst. proff"
+                    android:textColor="@color/grey"
+                    android:paddingLeft="10dp"
+                    android:layout_below="@+id/textView_lecturer_2" />
+
+                <android.support.percent.PercentRelativeLayout
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/percentRelativeLayout_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textView_lecturer_designation_2"
+                    android:padding="20dp" >
+
+                    <View
+                        android:id="@+id/view_2"
+                        app:layout_widthPercent="100%"
+                        android:layout_height="15dp"
+                        android:background="@drawable/button_background_fill_red"></View>
+
+                    <View
+                        app:layout_widthPercent="90%"
+                        android:layout_height="15dp"
+                        android:background="@drawable/button_background_fill_blue"
+                        android:elevation="4dp" ></View>
+
+                </android.support.percent.PercentRelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayout_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_below="@id/percentRelativeLayout_2"
+                    android:gravity="center_vertical" >
+
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:background="@drawable/button_background_fill_red" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Total marks (100)"
+                        android:textColor="@color/grey"
+                        android:layout_marginLeft="10dp"
+                        android:id="@+id/textView_2" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_below="@id/linearLayout_2"
+                    android:gravity="center_vertical" >
+
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:background="@drawable/button_background_fill_blue"
+                        android:layout_below="@+id/percentRelativeLayout" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Marks obtained (90)"
+                        android:textColor="@color/grey"
+                        android:layout_marginLeft="10dp" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <View
+            android:layout_width="100dp"
+            android:layout_height="1dp"
+            android:background="@color/indigo"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"></View>
+
+    </LinearLayout>
+
+</FrameLayout>

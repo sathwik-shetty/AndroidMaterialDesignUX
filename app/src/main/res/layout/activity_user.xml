@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.abc.qwerty.UserActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/app_bar_height"
+        android:fitsSystemWindows="true"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:contentScrim="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/app_bar_height"
+                android:src="@drawable/image"
+                android:scaleType="fitXY"
+                app:layout_collapseMode="parallax"
+                app:layout_collapseParallaxMultiplier="0.7" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp" >
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/imageView_user"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/person_large"
+                    app:civ_border_width="1dp"
+                    app:civ_border_color="@color/white"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:transitionName="@string/user_image_transition" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/imageView_user">
+
+                    <TextView
+                        android:id="@+id/textView_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Full Name"
+                        android:textColor="@color/white"
+                        android:textSize="20dp"
+                        android:gravity="right"
+                        android:layout_below="@+id/imageView_user"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:textStyle="normal|bold" />
+
+                    <TextView
+                        android:id="@+id/textView_branch"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Designation"
+                        android:textColor="@color/light_grey"
+                        android:gravity="right"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp" />
+
+                    <TextView
+                        android:id="@+id/textView_usn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="1234567890 (USN)"
+                        android:textColor="@color/light_grey"
+                        android:gravity="right"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/textView_sem"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Other Stuff!"
+                        android:textColor="@color/light_grey"
+                        android:gravity="right"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/relativeLayout" >
+
+                <HorizontalScrollView
+                    android:id="@+id/horizontal_scrollView"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_margin="10dp"
+                    android:fillViewport="true">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <Button
+                            android:id="@+id/button_attendance"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:text="Attendance"
+                            android:textColor="@color/white"
+                            android:textAllCaps="false"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/button_background_fill_red"
+                            android:transitionName="@string/home_button_transition" />
+
+                        <Button
+                            android:id="@+id/button_cgpa"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:text="CGPA"
+                            android:textColor="@color/white"
+                            android:textAllCaps="false"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/button_background_fill_green"
+                            android:layout_toRightOf="@+id/button_attendance"
+                            android:transitionName="@string/reminders_button_transition" />
+
+                        <!--<Button-->
+                        <!--android:id="@+id/button_reminders"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="30dp"-->
+                        <!--android:text="Reminders"-->
+                        <!--android:textColor="#ffffff"-->
+                        <!--android:textAllCaps="false"-->
+                        <!--android:layout_marginLeft="10dp"-->
+                        <!--android:layout_marginRight="10dp"-->
+                        <!--android:background="@drawable/button_background_fill_green"-->
+                        <!--android:layout_toRightOf="@+id/button_timeline" />-->
+
+                    </RelativeLayout>
+
+                </HorizontalScrollView>
+
+            </RelativeLayout>
+
+            </RelativeLayout>
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/content_user" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/fab_margin"
+        app:layout_anchor="@id/app_bar"
+        app:layout_anchorGravity="bottom|end"
+        app:srcCompat="@android:drawable/ic_dialog_email" />
+
+</android.support.design.widget.CoordinatorLayout>

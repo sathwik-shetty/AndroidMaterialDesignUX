@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.abc.qwerty.HomeActivity"
+    android:id="@+id/coordinatorLayout_home">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/app_bar_height"
+        android:fitsSystemWindows="true"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:contentScrim="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/image"
+                android:scaleType="fitXY"
+                app:layout_collapseMode="parallax"
+                app:layout_collapseParallaxMultiplier="0.7" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:background="@android:color/transparent" >
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/imageView_user"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/person_large"
+                    app:civ_border_width="1dp"
+                    app:civ_border_color="@color/white"
+                    android:layout_marginTop="50dp"
+                    android:layout_centerHorizontal="true"
+                    android:transitionName="@string/user_image_transition" />
+
+                <TextView
+                    android:id="@+id/textView_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Full Name"
+                    android:textColor="@color/white"
+                    android:textSize="20dp"
+                    android:layout_below="@+id/imageView_user"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:textStyle="normal|bold" />
+
+                <TextView
+                    android:id="@+id/textView_usn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Designation"
+                    android:textColor="@color/light_grey"
+                    android:layout_below="@+id/textView_name"
+                    android:layout_centerHorizontal="true"/>
+
+                <TextView
+                    android:id="@+id/textView_sem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1234567890 (USN)"
+                    android:textColor="@color/light_grey"
+                    android:layout_below="@+id/textView_usn"
+                    android:layout_centerHorizontal="true"/>
+
+            </RelativeLayout>
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/content_home" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="bottom|right">
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_library"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="@dimen/fab_margin"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/library" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_xerox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="@dimen/fab_margin"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/xerox" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/fab_margin"
+            android:layout_marginRight="@dimen/fab_margin"
+            app:srcCompat="@drawable/add" />
+
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>

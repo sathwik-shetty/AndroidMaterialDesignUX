@@ -1,0 +1,269 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.abc.qwerty.HomeFragment"
+    android:orientation="vertical">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <View
+        android:layout_width="100dp"
+        android:layout_height="1dp"
+        android:background="@color/red"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"></View>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Upcoming"
+        android:textColor="@color/light_grey"
+        android:layout_gravity="center_horizontal"/>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        app:cardElevation="4dp"
+        app:cardCornerRadius="2dp"
+        android:layout_marginTop="10dp" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/upcoming_class" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Upcoming class"
+                android:textColor="@color/grey"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/imageView"
+                android:layout_alignTop="@+id/imageView"
+                android:layout_alignBaseline="@+id/imageView" />
+
+            <TextView
+                android:id="@+id/textView_subject"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Subject 1"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:textStyle="normal|bold"
+                android:layout_below="@+id/imageView" />
+
+            <TextView
+                android:id="@+id/textView_lecturer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lecturer"
+                android:textColor="@color/grey"
+                android:paddingLeft="10dp"
+                android:layout_below="@+id/textView_subject" />
+
+            <TextView
+                android:id="@+id/textView_lecturer_designation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Asst. proff"
+                android:textColor="@color/grey"
+                android:paddingLeft="10dp"
+                android:layout_below="@+id/textView_lecturer" />
+
+            <TextView
+                android:id="@+id/textView_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="9:00 am - 10:am"
+                android:textColor="@color/grey"
+                android:layout_toRightOf="@id/textView_lecturer"
+                android:layout_alignBaseline="@+id/textView_lecturer"
+                android:layout_alignParentRight="true"
+                android:gravity="right"/>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        app:cardElevation="4dp"
+        app:cardCornerRadius="2dp"
+        android:layout_marginTop="10dp" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/upcoming_exams" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Upcoming exams"
+                android:textColor="@color/grey"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/imageView2"
+                android:layout_alignTop="@+id/imageView2"
+                android:layout_alignBaseline="@+id/imageView2" />
+
+            <TextView
+                android:id="@+id/textView_subject_exam"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Subject 2"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:textStyle="normal|bold"
+                android:layout_below="@+id/imageView2" />
+
+            <TextView
+                android:id="@+id/textView_lecturer_exam"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lecturer"
+                android:textColor="@color/grey"
+                android:paddingLeft="10dp"
+                android:layout_below="@+id/textView_subject_exam" />
+
+            <TextView
+                android:id="@+id/textView_lecturer_designation_exam"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Asst. proff"
+                android:textColor="@color/grey"
+                android:paddingLeft="10dp"
+                android:layout_below="@+id/textView_lecturer_exam" />
+
+            <TextView
+                android:id="@+id/textView_time_exam"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="9:00 am - 10:am"
+                android:textColor="@color/grey"
+                android:layout_toRightOf="@id/textView_lecturer_exam"
+                android:layout_alignBaseline="@+id/textView_lecturer_exam"
+                android:layout_alignParentRight="true"
+                android:gravity="right"/>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <View
+        android:layout_width="100dp"
+        android:layout_height="1dp"
+        android:background="@color/red"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"></View>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Trending"
+        android:textColor="@color/light_grey"
+        android:layout_gravity="center_horizontal"/>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        app:cardElevation="4dp"
+        app:cardCornerRadius="2dp"
+        android:layout_marginTop="10dp" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/trending_fest" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="College fest"
+                android:textColor="@color/grey"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/imageView3"
+                android:layout_alignTop="@+id/imageView3"
+                android:layout_alignBaseline="@+id/imageView3" />
+
+            <TextView
+                android:id="@+id/textView_fest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="College Fest Name"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:textStyle="normal|bold"
+                android:layout_below="@+id/imageView3" />
+
+            <TextView
+                android:id="@+id/textView_venue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Venue"
+                android:textColor="@color/grey"
+                android:paddingLeft="10dp"
+                android:layout_below="@+id/textView_fest" />
+
+            <TextView
+                android:id="@+id/textView_time_fest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="9:00 am - 10:am"
+                android:textColor="@color/grey"
+                android:layout_toRightOf="@id/textView_venue"
+                android:layout_alignBaseline="@+id/textView_venue"
+                android:layout_alignParentRight="true"
+                android:gravity="right"/>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <View
+        android:layout_width="100dp"
+        android:layout_height="1dp"
+        android:background="@color/red"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"></View>
+
+    <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_margin="@dimen/text_margin"-->
+        <!--android:text="@string/large_text"-->
+        <!--android:layout_below="@+id/horizontal_scrollView" />-->
+
+</LinearLayout>

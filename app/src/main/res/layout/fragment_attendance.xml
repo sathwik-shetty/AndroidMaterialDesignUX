@@ -1,0 +1,284 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.abc.qwerty.AttendanceFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        app:cardElevation="4dp"
+        app:cardCornerRadius="2dp"
+        android:layout_marginTop="10dp" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/attendance" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Attendance 90%"
+                android:textColor="@color/grey"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/imageView_1"
+                android:layout_alignTop="@+id/imageView_1"
+                android:layout_alignBaseline="@+id/imageView_1" />
+
+            <TextView
+                android:id="@+id/textView_subject_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cloud Computing"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:textStyle="normal|bold"
+                android:layout_below="@+id/imageView_1" />
+
+            <TextView
+                android:id="@+id/textView_lecturer_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lecturer"
+                android:textColor="@color/grey"
+                android:paddingLeft="10dp"
+                android:layout_below="@+id/textView_subject_1" />
+
+            <TextView
+                android:id="@+id/textView_lecturer_designation_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Asst. proff"
+                android:textColor="@color/grey"
+                android:paddingLeft="10dp"
+                android:layout_below="@+id/textView_lecturer_1" />
+
+            <View
+                android:id="@+id/view_1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/light_blue"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_below="@id/textView_lecturer_designation_1"></View>
+
+            <LinearLayout
+                android:id="@+id/linearLayout_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view_1" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Classes held"
+                android:textColor="@color/grey"
+                android:textStyle="normal|bold"
+                android:layout_weight="1"
+                android:layout_marginRight="10dp"
+                android:gravity="right" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Classes attended"
+                android:textColor="@color/grey"
+                android:textStyle="normal|bold"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linearLayout_1">
+
+                <TextView
+                    android:id="@+id/textView_classes_held_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="100"
+                    android:textColor="@color/grey"
+                    android:layout_weight="1"
+                    android:layout_marginRight="10dp"
+                    android:gravity="right" />
+
+                <TextView
+                    android:id="@+id/textView_classes_attended_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="90"
+                    android:textColor="@color/grey"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                app:cardElevation="4dp"
+                app:cardCornerRadius="2dp"
+                android:layout_marginTop="10dp" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imageView_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/attendance" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Attendance 90%"
+                        android:textColor="@color/grey"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/imageView_2"
+                        android:layout_alignTop="@+id/imageView_2"
+                        android:layout_alignBaseline="@+id/imageView_2" />
+
+                    <TextView
+                        android:id="@+id/textView_subject_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Compiler Design"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="15dp"
+                        android:textStyle="normal|bold"
+                        android:layout_below="@+id/imageView_2" />
+
+                    <TextView
+                        android:id="@+id/textView_lecturer_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Lecturer"
+                        android:textColor="@color/grey"
+                        android:paddingLeft="10dp"
+                        android:layout_below="@+id/textView_subject_2" />
+
+                    <TextView
+                        android:id="@+id/textView_lecturer_designation_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Asst. proff"
+                        android:textColor="@color/grey"
+                        android:paddingLeft="10dp"
+                        android:layout_below="@+id/textView_lecturer_2" />
+
+                    <View
+                        android:id="@+id/view_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/light_blue"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_below="@id/textView_lecturer_designation_2"></View>
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/view_2" >
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Classes held"
+                            android:textColor="@color/grey"
+                            android:textStyle="normal|bold"
+                            android:layout_weight="1"
+                            android:layout_marginRight="10dp"
+                            android:gravity="right" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Classes attended"
+                            android:textColor="@color/grey"
+                            android:textStyle="normal|bold"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout_4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/linearLayout_3">
+
+                        <TextView
+                            android:id="@+id/textView_classes_held_2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="100"
+                            android:textColor="@color/grey"
+                            android:layout_weight="1"
+                            android:layout_marginRight="10dp"
+                            android:gravity="right" />
+
+                        <TextView
+                            android:id="@+id/textView_classes_attended_2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="90"
+                            android:textColor="@color/grey"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"/>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <View
+                android:layout_width="100dp"
+                android:layout_height="1dp"
+                android:background="@color/light_blue"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"></View>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</FrameLayout>

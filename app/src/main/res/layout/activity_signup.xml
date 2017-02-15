@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_signup"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.abc.qwerty.SignupActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="USN"
+                android:textColor="@color/dark_grey"
+                android:layout_weight="1"
+                android:layout_marginLeft="20dp"
+                android:textStyle="normal|bold" />
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:textColor="@color/grey"
+                android:hint="USN"
+                android:textColorHint="@color/light_grey"
+                android:drawableLeft="@drawable/person"
+                android:drawablePadding="10dp"
+                android:padding="10dp"
+                android:background="@android:color/transparent"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/light_grey"
+            android:layout_marginLeft="20dp"></View>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:textColor="@color/dark_grey"
+                android:layout_weight="1"
+                android:layout_marginLeft="20dp"
+                android:textStyle="normal|bold" />
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:textColor="@color/grey"
+                android:hint="first and last name"
+                android:textColorHint="@color/light_grey"
+                android:drawableLeft="@drawable/person2"
+                android:drawablePadding="10dp"
+                android:padding="10dp"
+                android:background="@android:color/transparent"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/light_grey"
+            android:layout_marginLeft="20dp"></View>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Sex"
+                android:textColor="@color/dark_grey"
+                android:layout_weight="1"
+                android:layout_marginLeft="20dp"
+                android:textStyle="normal|bold" />
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:textColor="@color/grey"
+                android:hint="M/F"
+                android:textColorHint="@color/light_grey"
+                android:drawableLeft="@drawable/heart"
+                android:drawablePadding="10dp"
+                android:padding="10dp"
+                android:background="@android:color/transparent"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/light_grey"></View>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="DOB"
+                android:textColor="@color/dark_grey"
+                android:layout_weight="1"
+                android:layout_marginLeft="20dp"
+                android:textStyle="normal|bold" />
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:textColor="@color/grey"
+                android:inputType="date"
+                android:hint="dd/mm/yy"
+                android:textColorHint="@color/light_grey"
+                android:drawableLeft="@drawable/date"
+                android:drawablePadding="10dp"
+                android:padding="10dp"
+                android:background="@android:color/transparent"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/light_grey"></View>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Phone"
+                android:textColor="@color/dark_grey"
+                android:layout_weight="1"
+                android:layout_marginLeft="20dp"
+                android:textStyle="normal|bold" />
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:textColor="@color/grey"
+                android:inputType="number"
+                android:hint="required"
+                android:textColorHint="@color/light_grey"
+                android:drawableLeft="@drawable/phone"
+                android:drawablePadding="10dp"
+                android:padding="10dp"
+                android:background="@android:color/transparent"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/light_grey"
+            android:layout_marginLeft="20dp"></View>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Email"
+                android:textColor="@color/dark_grey"
+                android:layout_weight="1"
+                android:layout_marginLeft="20dp"
+                android:textStyle="normal|bold" />
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:textColor="@color/grey"
+                android:inputType="textEmailAddress"
+                android:hint="required"
+                android:textColorHint="@color/light_grey"
+                android:drawableLeft="@drawable/email"
+                android:drawablePadding="10dp"
+                android:padding="10dp"
+                android:background="@android:color/transparent"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/light_grey"></View>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Password"
+                android:textColor="@color/dark_grey"
+                android:layout_weight="1"
+                android:layout_marginLeft="20dp"
+                android:textStyle="normal|bold" />
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:textColor="@color/grey"
+                android:hint="min. 8 characters"
+                android:textColorHint="@color/light_grey"
+                android:drawableLeft="@drawable/password"
+                android:drawablePadding="10dp"
+                android:padding="10dp"
+                android:background="@android:color/transparent"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/light_grey"></View>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sign up"
+            android:textColor="#ffffff"
+            android:textAllCaps="false"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/button_background_fill_blue"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Already have an account? "
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/grey"/>
+
+            <TextView
+                android:id="@+id/textView_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Log in"
+                android:layout_gravity="center_horizontal"
+                android:textColor="#42a5f5"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

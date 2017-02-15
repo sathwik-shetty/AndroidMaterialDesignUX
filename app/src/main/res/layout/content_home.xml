@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.abc.qwerty.HomeActivity"
+    tools:showIn="@layout/activity_home"
+    android:id="@+id/nestedScrollView_home" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <HorizontalScrollView
+            android:id="@+id/horizontal_scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:fillViewport="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+    <Button
+        android:id="@+id/button_home"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:text="Home"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/button_background_fill_red"
+        android:transitionName="@string/home_button_transition" />
+
+        <Button
+            android:id="@+id/button_timeline"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="Timeline"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/button_background_fill_indigo"
+            android:layout_toRightOf="@+id/button_home" />
+
+        <Button
+            android:id="@+id/button_reminders"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="Reminders"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/button_background_fill_green"
+            android:layout_toRightOf="@+id/button_timeline"
+            android:transitionName="@string/reminders_button_transition" />
+
+            </RelativeLayout>
+
+        </HorizontalScrollView>
+
+        <FrameLayout
+            android:id="@+id/frameLayout_home"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/horizontal_scrollView">
+
+        </FrameLayout>
+
+    </RelativeLayout>
+
+</android.support.v4.widget.NestedScrollView>
