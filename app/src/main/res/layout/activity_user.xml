@@ -151,18 +151,6 @@
                             android:layout_toRightOf="@+id/button_attendance"
                             android:transitionName="@string/reminders_button_transition" />
 
-                        <!--<Button-->
-                        <!--android:id="@+id/button_reminders"-->
-                        <!--android:layout_width="wrap_content"-->
-                        <!--android:layout_height="30dp"-->
-                        <!--android:text="Reminders"-->
-                        <!--android:textColor="#ffffff"-->
-                        <!--android:textAllCaps="false"-->
-                        <!--android:layout_marginLeft="10dp"-->
-                        <!--android:layout_marginRight="10dp"-->
-                        <!--android:background="@drawable/button_background_fill_green"-->
-                        <!--android:layout_toRightOf="@+id/button_timeline" />-->
-
                     </RelativeLayout>
 
                 </HorizontalScrollView>
