@@ -16,7 +16,7 @@ public class SignupActivity extends AppCompatActivity {
 
         getSupportActionBar().setTitle(Html.fromHtml("<font color='#757575'> We welcome you! </font>"));
 
-        TextView textView_login = (TextView) findViewById(R.id.textView_login);
+        TextView textView_login = findViewById(R.id.textView_login);
         textView_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

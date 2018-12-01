@@ -26,8 +26,6 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
     ImageView imageView;
 
     FloatingActionButton fab;
-    RelativeLayout relativeLayout_fabs;
-
     FloatingActionButton fab_library;
     FloatingActionButton fab_xerox;
 
@@ -42,21 +40,20 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
 
         setContentView(R.layout.activity_home);
 
-        fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab_library = (FloatingActionButton) findViewById(R.id.fab_library);
-        fab_xerox = (FloatingActionButton) findViewById(R.id.fab_xerox);
+        fab = findViewById(R.id.fab);
+        fab_library = findViewById(R.id.fab_library);
+        fab_xerox = findViewById(R.id.fab_xerox);
 
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                RotateAnimation rotateAnimation = new RotateAnimation(fromDegrees, fromDegrees = fromDegrees+135, fab.getWidth()/2, fab.getHeight()/2);
+                RotateAnimation rotateAnimation = new RotateAnimation(fromDegrees, fromDegrees = fromDegrees + 135, fab.getWidth() / 2, fab.getHeight() / 2);
                 rotateAnimation.setDuration(200);
                 rotateAnimation.setFillEnabled(true);
                 rotateAnimation.setFillAfter(true);
                 fab.setAnimation(rotateAnimation);
 
                 if ((fab_library.getVisibility() == View.INVISIBLE) || (fab_xerox.getVisibility() == View.INVISIBLE)) {
-
                     // get the center for the clipping circle
                     int cx = fab_xerox.getWidth() / 2;
                     int cy = fab_xerox.getHeight() / 2;
@@ -68,11 +65,11 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
                     final Animator anim = ViewAnimationUtils.createCircularReveal(fab_xerox, cx, cy, 0, finalRadius);
 
                     // make the view visible and start the animation
-                    fab_xerox.setVisibility(View.VISIBLE);
+//                    fab_xerox.setVisibility(View.VISIBLE);
+                    fab_xerox.show();
 
                     anim.setDuration(200);
                     anim.start();
-
                     anim.addListener(new AnimatorListenerAdapter() {
                         @Override
                         public void onAnimationEnd(Animator animation) {
@@ -89,13 +86,13 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
                                     ViewAnimationUtils.createCircularReveal(fab_library, cx, cy, 0, finalRadius);
 
                             // make the view visible and start the animation
-                            fab_library.setVisibility(View.VISIBLE);
+//                            fab_library.setVisibility(View.VISIBLE);
+                            fab_library.show();
                             anim.setDuration(200);
                             anim.start();
                         }
                     });
-                }
-                else{
+                } else {
                     final View myView = fab_library;
 
                     int cx = myView.getWidth() / 2;
@@ -105,7 +102,6 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
 
                     Animator anim =
                             ViewAnimationUtils.createCircularReveal(myView, cx, cy, initialRadius, 0);
-
                     anim.addListener(new AnimatorListenerAdapter() {
                         @Override
                         public void onAnimationEnd(Animator animation) {
@@ -113,11 +109,9 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
                             myView.setVisibility(View.INVISIBLE);
                         }
                     });
-
                     anim.setDuration(200);
                     // start the animation
                     anim.start();
-
                     anim.addListener(new AnimatorListenerAdapter() {
                         @Override
                         public void onAnimationEnd(Animator animation) {
@@ -130,7 +124,6 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
                             float initialRadius = (float) Math.hypot(cx, cy);
 
                             Animator anim = ViewAnimationUtils.createCircularReveal(myView, cx, cy, initialRadius, 0);
-
                             anim.addListener(new AnimatorListenerAdapter() {
                                 @Override
                                 public void onAnimationEnd(Animator animation) {
@@ -138,7 +131,6 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
                                     myView.setVisibility(View.INVISIBLE);
                                 }
                             });
-
                             anim.setDuration(200);
                             // start the animation
                             anim.start();
@@ -148,15 +140,15 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
             }
         });
 
-        final Button button_home = (Button) findViewById(R.id.button_home);
+        final Button button_home = findViewById(R.id.button_home);
         button_home.setOnClickListener(this);
-        Button button_timeline = (Button) findViewById(R.id.button_timeline);
+        Button button_timeline = findViewById(R.id.button_timeline);
         button_timeline.setOnClickListener(this);
-        final Button button_reminders = (Button) findViewById(R.id.button_reminders);
+        final Button button_reminders = findViewById(R.id.button_reminders);
         button_reminders.setOnClickListener(this);
 
-        imageView_user = (ImageView) findViewById(R.id.imageView_user);
-        imageView = (ImageView) findViewById(R.id.imageView);
+        imageView_user = findViewById(R.id.imageView_user);
+        imageView = findViewById(R.id.imageView);
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -194,39 +186,39 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onFragmentInteraction(Uri uri) {
-
     }
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
+        switch (v.getId()) {
             case R.id.button_home:
                 HomeFragment homeFragment = new HomeFragment();
                 getSupportFragmentManager().beginTransaction()
                         .replace(R.id.frameLayout_home, homeFragment).commit();
-                Toast.makeText(this, "button home", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Button Home", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.button_timeline:
                 TimelineFragment timelineFragment = new TimelineFragment();
                 getSupportFragmentManager().beginTransaction()
                         .replace(R.id.frameLayout_home, timelineFragment).commit();
-                Toast.makeText(this, "button timeline", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Button Timeline", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.button_reminders:
-                Toast.makeText(this, "button reminders", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Button Reminders", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.fab_xerox:
                 break;
             case R.id.fab_library:
                 break;
-            default: break;
+            default:
+                break;
         }
     }
 
     @Override
     public void onBackPressed() {
-        if ((fab_library.getVisibility() == View.VISIBLE) || (fab_xerox.getVisibility() == View.VISIBLE)){
-            RotateAnimation rotateAnimation = new RotateAnimation(fromDegrees, fromDegrees = fromDegrees+135, fab.getWidth()/2, fab.getHeight()/2);
+        if ((fab_library.getVisibility() == View.VISIBLE) || (fab_xerox.getVisibility() == View.VISIBLE)) {
+            RotateAnimation rotateAnimation = new RotateAnimation(fromDegrees, fromDegrees = fromDegrees + 135, fab.getWidth() / 2, fab.getHeight() / 2);
             rotateAnimation.setDuration(200);
             rotateAnimation.setFillEnabled(true);
             rotateAnimation.setFillAfter(true);
@@ -280,8 +272,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
                     anim.start();
                 }
             });
-        }
-        else
+        } else
             super.onBackPressed();
     }
 }

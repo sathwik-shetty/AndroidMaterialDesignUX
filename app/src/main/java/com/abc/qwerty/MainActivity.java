@@ -15,9 +15,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        getSupportActionBar().setTitle(Html.fromHtml("<font color='#757575'> Login to Alphabet </font>"));
+        getSupportActionBar().setTitle(Html.fromHtml("<font color='#757575'> Login </font>"));
 
-        TextView textView_signup = (TextView) findViewById(R.id.textView_signup);
+        TextView textView_signup =  findViewById(R.id.textView_signup);
         textView_signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Button button_login = (Button) findViewById(R.id.button_login);
+        Button button_login = findViewById(R.id.button_login);
         button_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

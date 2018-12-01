@@ -43,11 +43,11 @@ public class UserActivity extends AppCompatActivity implements View.OnClickListe
                     .add(R.id.frameLayout_attendance, firstFragment).commit();
         }
 
-        ImageView imageView_user = (ImageView) findViewById(R.id.imageView_user);
+        ImageView imageView_user = findViewById(R.id.imageView_user);
 
-        Button button_attendance = (Button) findViewById(R.id.button_attendance);
+        Button button_attendance = findViewById(R.id.button_attendance);
         button_attendance.setOnClickListener(this);
-        Button button_cgpa = (Button) findViewById(R.id.button_cgpa);
+        Button button_cgpa = findViewById(R.id.button_cgpa);
         button_cgpa.setOnClickListener(this);
 
     }
