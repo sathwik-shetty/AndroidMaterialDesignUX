@@ -1,4 +1,5 @@
 # AndroidMaterialDesignUX
+Android Material Design with CircularRevealEffect, Parallax Effect, Touch feedback, Card views, Shared element transition, floating action button.
 
 ![Demo](https://cloud.githubusercontent.com/assets/25792853/22975389/95636942-f3ac-11e6-84fc-c5c9196fb4b1.gif)
 
